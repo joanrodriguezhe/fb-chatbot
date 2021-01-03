@@ -15,7 +15,7 @@ app.get('/',function(req,res){
     res.send("Hello World from chatbot");
 })
 
-app.get('webhook',function(reg,res){
+app.get('/webhook',function(reg,res){
     if(req.query['hub.verify_token']==="bluelime"){
         res.send(req.query['hub.challenge']);
     }
